@@ -1,3 +1,19 @@
+@media (prefers-color-scheme: dark) {
+    body {
+        color: white;
+        background-color:  black;
+    }
+}
+   
+   @media (prefers-color-scheme: light) {
+    gitbody {
+        color: black;
+        background-color:  white;
+    }
+   }
+
+
+
 body {
     width : 100%;
     max-width: 1000px;
