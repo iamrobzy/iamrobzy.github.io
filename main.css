@@ -1,31 +1,30 @@
-@media (prefers-color-scheme: dark) {
-    body {
-        color: white;
-        background-color:  black;
-    }
-}
-   
-   @media (prefers-color-scheme: light) {
-    gitbody {
-        color: black;
-        background-color:  white;
-    }
-   }
-
-
-
+/* Default light mode styles */
 body {
-    width : 100%;
+    width: 100%;
     max-width: 1000px;
     margin: 0 auto;
     font-size: 18px;
     font-family: monospace;
+    color: black;
+    background-color: white;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .header {
     text-align: center;
+    position: relative;
 }
 
+/* Dark mode toggler icon */
+.theme-icon {
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Other styles */
 .title {
     width: 100%;
     display: flex;
@@ -47,15 +46,27 @@ a {
     color: #181825;
     text-align: center;
 }
-  
+
 a:hover {
     color: #2a7ae2;
     text-decoration: underline;
 }
 
+/* Dark mode styles */
+body.dark-mode {
+    color: white;
+    background-color: black;
+}
 
-h3 {
+body.dark-mode a {
+    color: white;
+}
 
-    margin: 10px 0 0 0;
-    padding: 0;
+body.dark-mode a:hover {
+    color: #2a7ae2;
+}
+
+/* Add spacing between the links */
+.header div a {
+    margin: 0 15px; /* Adjust the value as needed for a larger or smaller gap */
 }

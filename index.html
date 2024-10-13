@@ -18,6 +18,8 @@
             <a href="https://www.linkedin.com/in/robert-skoglund-4420a3171/">LinkedIn</a>
             <a href="https://github.com/iamrobzy">GitHub</a>
         </div>
+
+        <span id="theme-toggler" class="theme-icon">🌙</span>
     
     </div>
 
@@ -168,5 +170,19 @@
     
     
     <!-- Your content goes here -->
+
+    <script>
+        // JavaScript to toggle dark mode
+        const toggler = document.getElementById('theme-toggler');
+        toggler.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            // Change the emoji icon based on the current theme
+            if (document.body.classList.contains('dark-mode')) {
+                toggler.textContent = '☀️'; // Sun icon for light mode
+            } else {
+                toggler.textContent = '🌙'; // Moon icon for dark mode
+            }
+        });
+    </script>
 </body>
 </html>
